@@ -1,0 +1,258 @@
+escape sequence ::
+these are the line breaks or a tab break in the program while running the program using strings
+
+escape sequences are
+\n ==new line
+\t == tab the line
+
+
+(len(string name or the actual string)) it is used to check the length of the string.
+
+
+
+string indexing and string slicing..
+string indexing == it is used to call or select a specific character in a string.
+syntax:-
+variable_name[address of the character]
+
+example:-
+mystring[2]
+
+
+string slicing == it is used to grab a sub-section of the string.
+syntax:-
+variable_name[starting address:end address]                       (if the value is not put then the proram will set it's default value to the starting or the ending of the program)
+
+
+example:-
+
+
+string slicing(step size)==it is used to jump to the characters like if there is a string which is "abcde" then if we want to print 'ace' then the program or statement would be mystring[0:5:2]
+
+syntax:-
+variable_name[starting address:end address:step size]
+
+
+
+reverse a string using step size (trick)
+syntax:-
+variable_name[starting address:end address:step size(-1)]
+
+
+example:-
+mystring[::-1]
+
+
+string concatination:-
+syntax:-
+first_variable or string + secend variable or string
+
+example:-
+p + mystring
+
+
+
+
+
+string formatting:-
+it is a useful tool to join the number of items of variable in a tring while printing it
+
+
+.format method:-
+syntax:-
+print("string1 {} {}".format(string2,string 3))
+
+example:-
+print("this {} {} {}".format("is","my","string"))
+
+
+we can also order the string using .format() method by providing the index number of the string.
+print("this {2} {1} {0}".format("is","my","string"))
+this will print
+"this string my is"
+
+we can also assign the string in .format() method.
+print("this {i} {m} {s}".format(i="is",m="my",s="string"))
+
+
+
+
+padding and precision float formatting:-
+it is used when we have a number which is very large and we only wants the few or specified decimal digits in the program.
+
+syntax:-
+print("string {starting address:maximum number of real characters.maximum number of decimal characters(f)".format(decimal number or variable))                    
+\\note that the maximum number of decimal characteres should alwaya end with "f" letter at the ending.
+
+
+for example:-
+print("pi value is {:2.4f}.".format(7\3))
+
+
+
+
+
+
+f-string(formatted string literals)
+
+it is another type of string formatting.
+syntax:-
+print(f"string {variable or string}")
+
+example:-
+print(f"this is {mystring}")
+
+
+
+
+lists:-
+list are the collection of elements in a variable
+
+lists can be of any type means it can have all the type of values like floating point number , integer etc.
+lists are very flexible in python.
+
+
+syntax:
+variable_name[value1,value2,value3]
+
+example:
+mystring[1,'akash',2.5]
+
+lists uses the indexing and slicing method like strings
+lists are mutable. means that it can be change the values of the list.
+
+
+
+dictionaries:-
+dictionaries are same as the list but it is unordered list which means we cannot sort the dictionary or we cannot index or slice it.
+It is based on key mapping means all the variable are mapped using keys.
+syntax:-
+variable_name_of dictionary = {'key_1':'value1'}
+
+example:-
+my_dictionary={'name':'akash','age':'17'}
+
+
+syntax to get value from dictionaries:-
+variable_name_of_dictionary[key]
+
+
+if we want to print all the keys of a dictionary then we can use
+variable_name_of_dictionary.keys()
+
+if we want to print all the values of the dictionary then we can use
+variable_name_of_dictionary.values()
+
+id we want to print all the pairings of the dictionary or the key and it's value then we can use
+variable_name_of_dictionary.items()
+
+
+
+
+
+tuple:-
+
+it is same as the list but the main difference between tuple and the list is that we cannot assign or replace the value is the value is assigned or we can say that tuple is immutable.
+
+syntax for initialization of tuple:-
+variable_name(value1,valuue2)
+
+tuple has very finite number of methods which are only two i.e. 
+1. count:- This method counts the number of times the defined value is occoured in the parameters.
+2. index:- This method gives the index position of the very first occourance of the value defined in the parameters.
+
+
+
+
+sets:-
+sets are the unordered collection of unique data elements. means it can have a value only once in the set.values do not repeat in sets.
+
+syntax:-
+variable_name = set()
+
+method of adding values to the set:-
+variable_name.add(value)
+
+set can be also used by the string means it will show the unique values of the list.
+syntax:-
+variable_name = set(list_variable_name)
+
+
+
+
+booleans:-
+1.true :- It is represented in python with "True".
+2.false:- It is represented in python with "False".
+3.none :- It is used in python to define the variable which do not have any value.It is represented as "None".
+    syntax:-
+    variable_name = None
+
+
+
+
+
+input / output:-(using .txt)
+This method is mainly used in python to access the file in python for some basic operations like rename, write data, read data etc.
+
+
+    open method:-
+    This method is used in python to open the files which are in the current directory of the python file.
+    syntax:-
+    variable_name = open('file_name.txt')
+
+
+
+    read method:-
+    This method is used to read the contents of the file which is opened in the python.
+    syntax:-
+    variable_name.read()
+
+    note:- this methodcan be only used once as the cursor of the file is shifted to the end of the file.
+    so if we want to print the file again then we have to use the seek method to shift the cursor to the starting location of the file.
+
+    syntax:-
+    variable_name.seek(0)
+
+    Seek method can be also used to shift the position of the cursor to the specified index by passing the index number in the parameters.
+
+    readlines method:-
+    readlines method is used to read the lines of the text file.
+    syntax:-
+    variable_name.readlines()
+
+
+    readline method()
+    readline method is used to read the document till the index position of the specified index position given in parameters.
+    syntax:-
+    variable_name.readline(index_position)
+
+
+    close method()
+    close method is used to close the current file which we are working on.
+    syntax:-
+    variable_name.close()
+
+
+    another way or the new way of accessing the file:-
+    It is mainly used to avoid the error which is caused if we use the open method then another program gets errors with that file.
+    syntax:-
+    with open(file_name) as variable_name:
+
+
+    modes of file processing:-
+    There are certain modes of file processing which allows certain task to perform on the file.
+    The default mode of file processing is set to 'r' (read mode)
+    Modes are:-
+    1. 'r' = read only file.
+    2. 'w' = write only file.If the file name does not exist then it simply creates a new file using that name.
+    3. 'a' = append file. Which means to add data to the existing document in a new line.
+    4. 'r+'= it allows reading and writing file.
+    5. 'w+'= it allows writing and reading file. It basically overwrites the current file and creates a new one.
+
+
+    syntax for applying modes on file processing:-
+    variable_name = open('file_name' , mode='mode_of_file_prcessing')
+
+
+    
+    
